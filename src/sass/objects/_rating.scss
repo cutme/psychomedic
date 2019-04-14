@@ -1,0 +1,15 @@
+.o-rating {
+
+    .icon-star {
+        margin-right: 5px;
+        font-size: rem(15);
+        color: $c-yellow1;
+    }
+    
+    &--small {
+        .icon-star {
+            margin-right: 2px;
+            font-size: rem(10);
+        }
+    }
+}

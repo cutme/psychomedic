@@ -1,0 +1,45 @@
+.o-login {
+    @extend %abs;
+    @extend %anim;
+    @extend %flex;
+    @extend %flex-xy;
+    @extend %flex-wrap;
+    right: 0; top: 0;
+    width: 72px; height: 65px;
+    background-color: $c-violet1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    padding: 15px 0 10px 0;
+    transform: translate3d(0, -5px, 0);
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        width: 42px;
+        height: 50px;
+    }
+    
+    i {
+        font-size: rem(16);
+    }
+    
+    span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font: {
+            size: rem(11);
+            weight: $bold;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            display: none;
+        }
+    }
+    
+    &:hover {
+        .desktop & {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

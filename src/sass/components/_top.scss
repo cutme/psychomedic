@@ -1,0 +1,89 @@
+.c-top {
+    @include z-index(top);
+    height: 120px;
+    background-color: white;
+    
+    &__days {
+        @extend %flex;
+        @extend %flex-y;
+        font-weight: $bold;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            display: none;
+        }
+
+        .big {
+            font-size: rem(53);
+            color: $c-violet1;
+            
+            @media screen and ( max-width: $base + 80px ) {
+                font-size: get-vw-1250(53);
+            }
+        } 
+       
+        .small {
+            font-size: rem(30);
+            color: $c-gray2;
+            
+            @media screen and ( max-width: $base + 80px ) {
+                font-size: get-vw-1250(30);
+            }
+        }
+    }
+    
+    .o-phones {
+        margin-right: grid(150);
+        font-size: rem(18);
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(14);
+        } 
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            
+            p {
+                display: inline-block;
+                padding: 0 10px;
+            }
+        } 
+        
+        &:before, &:after {
+            background-color: $c-violet1;
+        }
+        
+        .num,
+        .icon-tel {
+            color: $c-violet1;
+        }
+        
+        .num {
+            font-weight: $bold;
+        }        
+    }
+    
+    .o-logo {
+        @media screen and ( max-width: $base + 80px ) {
+            width: get-vw-1250(368);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 200px;
+        }
+    }
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-spacebetween;
+        @extend %flex-y;
+        @extend %rel;
+        height: 100%;
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.o-award {
+    @extend %abs;
+    right: 0; top: 70px;
+    width: 55px; height: 65px;
+    background: {
+        image: url(../img/assets/award.png);
+        repeat: no-repeat;
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        display: none;
+    }
+}

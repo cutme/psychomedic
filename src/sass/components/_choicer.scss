@@ -1,0 +1,188 @@
+.c-choicer {
+    @extend %rel;
+    max-width: 1030px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: rgba(#232425, .07) 1px 0 13px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+
+    &__doctors {
+        background-color: $c-gray4;
+        padding: 0 grid(60, 1030);
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: 0 60px;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding: 0 40px;
+        }
+        
+        .flickity-button {
+            @extend %flex-x;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            background-color: $c-violet1;
+            color: white;
+            padding: 0;
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 40px;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 30px;
+            }
+            
+            &:before {
+                width: 100%;
+                @extend %abs;
+                @extend %abs-y;
+            }
+
+            &.previous { 
+                left: -60px;
+                border-bottom-left-radius: 10px;
+                
+                @media screen and ( max-width: 1030px ) {
+                    left: get-vw-1030(-60);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    left: -60px;
+                }
+                
+                @media screen and ( max-width: $smartphone_portrait + px ) {
+                    left: -40px;
+                }
+            }
+        
+            &.next { 
+                right: -60px; 
+                border-bottom-right-radius: 10px;
+                
+                &:before {
+                    transform: translate3d(0, -50%, 0) scaleX(-1);
+                }
+                
+                @media screen and ( max-width: 1030px ) {
+                    right: get-vw-1030(-60);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    right: -60px;
+                }
+                
+                @media screen and ( max-width: $smartphone_portrait + px ) {
+                    right: -40px;
+                }
+            }
+        }
+    }
+
+    &__specs {
+        background-color: white;
+        border-top-left-radius: 10px;
+        padding: 20px 50px;
+        
+        transition: 250ms opacity ease-out;
+        opacity: 0;
+        
+        .o-header {
+            margin-bottom: 20px;
+            color: $c-violet1;
+        }
+    } 
+    
+    .o-cols {
+        @extend %flex-wrap;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            display: block;
+        }
+
+        &__item {
+            width: 50%;
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 100%;
+            }
+            
+            &:first-child,
+            &:nth-child(2) {
+                .c-doctorbox {
+                    border-bottom: 1px solid $c-gray6;
+                }
+            }
+            
+            &:nth-child(odd) {
+                @media screen and ( min-width: $tablet_portrait + 1px ) {
+                    padding-left: 50px;
+                }
+                
+                .c-doctorbox {
+                    &__right {
+                        &:after {
+                            @extend %abs;
+                            @extend %abs-after;
+                            top: 0; right: -45px;
+                            width: 1px; height: 100%;
+                            background: $c-gray6;
+                            
+                            @media screen and ( max-width: 1030px ) {
+                                right: get-vw-1030(-45);
+                            }
+                            
+                            @media screen and ( max-width: $tablet_portrait + px ) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                @media screen and ( min-width: $tablet_portrait + 1px ) {
+                    padding-right: 50px;
+                }
+                
+                .c-doctorbox {
+                    margin: 0 0 0 auto;
+                }
+            }
+        }        
+    }  
+    
+    .c-doctorbox {
+        padding: 40px 0;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: 20px 0;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding: 10px 0;
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            width: grid(360, 405);
+        }
+        
+        .o-rating {
+            padding: 5px 0 15px 0;
+        }
+    } 
+}
+
+.is-loaded {
+    .o-tabs__item {
+        &.is-active {
+            .c-choicer__specs {
+                opacity: 1;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,97 @@
+.glide {
+    &__arrow {
+        @extend %abs;
+        @extend %abs-y;
+        @extend %anim;
+        @extend %flex;
+        @extend %flex-xy;
+        @extend %flex-shrink;  
+        width: 74px;
+        height: 74px;
+        background-color: white;
+        padding: 0;
+        font-size: rem(48);
+        color: $c-blue1;
+        
+        @media screen and ( max-width: $slider + px ) {
+            width: get-vw-1400(74);
+            height: get-vw-1400(74);
+            font-size: get-vw-1400(48);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 20px;
+            height: 20px;
+            font-size: rem(16);
+        }
+
+        &:before {
+            @extend %anim;
+        }
+            
+        &--left {
+            left: 0;
+                
+            &:hover {
+                .desktop & {
+                    &:before {
+                        transform: translate3d(-3px, 0, 0);
+                    }
+                }
+            }            
+        }
+        
+        &--right {
+            right: 0;
+                          
+            &:hover {
+                .desktop & {
+                    &:before {
+                        transform: translate3d(3px, 0, 0);
+                    }
+                }
+            }
+        }        
+    }
+
+    &__bullet {
+        @extend %rel;
+        width: 22px;
+        height: 22px;
+        background-color: transparent; 
+        border-radius: 50%;
+        border: 3px solid white;
+        margin: 0 10px;
+        padding: 0;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 18px;
+            height: 18px;
+            border-width: 2px;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 12px; height: 12px;
+            margin: 0 5px;
+        }
+        
+        &--active {
+            background-color: white;
+        }
+    }
+    
+    &__bullets {
+        @extend %abs;
+        left: 0;
+        bottom: 40px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    &__slide {
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            height: auto !important;
+        }
+    }
+}
+

@@ -1,0 +1,122 @@
+.c-contact {
+
+    &__details {
+        @extend %flex;
+        @extend %flex-spacebetween;
+        @extend %flex-wrap;
+        border-bottom: 1px solid $c-gray10;
+        margin-bottom: 20px;
+
+        .item {
+            @extend %rel;
+            padding: 0 0 15px 25px;
+            
+            &:not(:last-of-type) {
+                padding-right: 20px;
+            }
+            
+            p {
+                margin-bottom: .4em;
+                font-size: rem(14);
+            }
+            
+            [class^="icon-"] {
+                @extend %abs;
+                left: 0; top: 0;
+                font-size: rem(18);
+                color: $c-violet1;
+            }
+            
+            .icon-clock-o {
+                font-size: rem(20);
+                top: -3px;
+            }
+
+            .icon-tel {
+                font-size: rem(16);
+                
+                &:before {
+                    display: inline-block;
+                    transform: scaleX(-1);
+                }
+            }
+
+            .o-header {
+                color: $c-violet1;
+            }
+            
+            a,
+            strong {
+                font-weight: $bold;
+                color: $c-violet1;
+            }
+            
+            a {
+                @extend %ulink;
+                
+                &:before, &:after {
+                    background-color: $c-violet1;
+                }
+            }
+            
+            
+            
+            &.hours {
+                p {
+                    @extend %flex;
+                    @extend %flex-wrap;
+                    @extend %flex-spacebetween;
+                }
+                
+                .days {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+
+    .o-section {
+        padding-top: 0;
+    }
+    
+    .o-cols {
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            flex-wrap: wrap;
+        }
+        
+        &__item {
+            &:first-of-type {
+                width: grid(470);
+                
+                @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+                    width: 45%;
+                    flex-shrink: 0;
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    width: auto;
+                    margin-bottom: 40px !important;
+                }
+            }
+            
+            &:last-of-type {
+                @media screen and ( min-width: $tablet_portrait + 1px ) {
+                    flex: 1 auto;
+                    padding-left: 30px;
+                }
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: auto;
+                max-width: 470px;
+                margin: 0 auto;
+            }
+        }
+        
+        .o-article {
+            strong {
+                color: $c-violet1;
+            }
+        }
+    }
+}

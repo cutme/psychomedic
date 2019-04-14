@@ -1,0 +1,70 @@
+.o-header {
+    text-transform: uppercase;
+    font-weight: $bold;
+
+    /* Sizes */
+
+    &--first {
+        margin-bottom: 1em;
+        font-size: rem(24); 
+    }
+    
+    &--second {
+       font-size: rem(22); 
+    }
+    
+    &--third {
+       font-size: rem(16); 
+    }
+    
+    &--fourth {
+       font-size: rem(14); 
+    }
+    
+    
+    /* Triangle */
+
+    &--triangle {
+        @extend %rel;
+
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            font-family: $icomoon;
+            color: $c-orange1;
+            content: "\e901";
+        }
+    }
+    
+    &--triangle-left {
+        padding-left: 20px;
+
+        &:after {
+            left: 0;
+            top: -4px;
+            transform: rotate(270deg);
+            font-size: rem(28);
+        }
+    }
+    
+    &--triangle-bottom {
+        margin-bottom: 90px;
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            margin-bottom: 60px;
+        }
+        
+        &:after {
+            @extend %abs-x;
+            bottom: -46px;
+            font-size: rem(48);
+        }
+    }
+
+
+    /* Button fix */
+
+    span {
+        color: $c-orange1;
+    }
+}

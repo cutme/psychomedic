@@ -1,0 +1,215 @@
+.c-app {
+    @extend %rel;
+    min-height: 285px;
+    background: {
+        color: $c-violet1;
+        image: url(../img/assets/app.jpg);
+        size: cover;
+        position: center;
+    }
+    margin-bottom: 20px;
+    padding: 30px 30px 0 30px;
+    color: white;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        padding-bottom: 15px;
+    }
+    
+    &:before {
+        @extend %abs;
+        @extend %abs-after;
+        @extend %abs-x;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 24px 29px 0 29px;
+        border-color: white transparent transparent transparent;
+    }
+    
+    .customSelect {
+        .custom-select-opener {
+            padding: 0;
+            text-align: center;
+            font-size: rem(16);
+            color: white;
+        }
+        
+        .custom-select-panel {
+            background-color: $c-violet1 !important;
+        }
+        
+        .custom-select-option {
+            
+            text-align: center;
+            
+            &:hover, 
+            &.has-focus, 
+            &.is-selected.has-focus {
+                color: $c-orange1 !important;
+            }
+        }
+    }
+    
+    .o-btn {
+        width: 100%;
+        
+        .icon-search {
+            margin-right: 8px;
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 24px;
+        text: {
+            align: center;
+        }
+    }    
+    
+    .o-wrap {
+        max-width: 830px;
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding: 0;
+    	}
+    }
+    
+    .dash {
+        @extend %rel;
+        @extend %flex-shrink;
+        width: 14px; height: 42px;
+        margin: 0 12px;
+        
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            @extend %abs-y;
+            width: 100%;
+            height: 4px;
+            background-color: white;
+        }
+    }
+    
+    .customSelect,
+    .form-field {
+        background-color: rgba(white, .17);
+        border-radius: 10px;
+    }
+    
+    .form-field {
+        background: {
+            position: center;
+            repeat: no-repeat;
+        }
+        
+        &.calendar,
+        &.clock {
+            line-height: 42px;
+            text-align: center;
+            
+            .mobile & {
+                padding-left: 26px;
+                font-size: rem(13);
+            }
+        }
+        
+        .desktop & {
+            &.calendar {
+                background: {
+                    image: url(../img/icons/calendar.svg);
+                    size: 16px 18px;
+                }
+            }
+            
+            &.clock {
+                background: {
+                    image: url(../img/icons/clock-o.svg);
+                    size: 17px 18px;
+                }
+            }
+            
+            
+            &.calendar,
+            &.clock {
+                padding: 0 10px;
+            }
+            
+            &.no-icon {
+                background-image: none !important;
+            }
+        }
+    }
+    
+    .form-row {
+        @extend %flex-spacebetween;
+        margin-bottom: 35px;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 0;
+        }
+    }
+    
+    .form-label {
+        text-transform: uppercase;
+    }
+    
+    .form-group {
+        & > div {
+            @extend %flex;
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+            }
+        }
+    }
+    
+    .form-col {
+        width: grid(210, 750);
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 50%;
+            margin-bottom: 20px;
+            padding: 0 10px;
+            text-align: center;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding: 0;
+        }
+        
+        &.date {
+            
+        }
+        
+        &.specialty {
+            .customSelect {                
+                .custom-select-opener {
+                    font-size: rem(18);
+                }
+            }
+        }
+        
+        &.doctor {
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 100%;
+                
+                .form-group {
+                    //width: grid(210, 750);
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        
+        &.submit {
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+        }
+    }
+}

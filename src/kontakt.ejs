@@ -1,0 +1,222 @@
+<% include ./src/includes/head %>
+
+<body class="home" style="overflow: hidden;">
+
+<% include ./src/includes/cover %>
+                                            
+    <div class="o-container">
+
+        <% include ./src/includes/top %>
+
+
+        <% include ./src/includes/nav %>
+    
+
+        <div class="c-breadcrumbs">
+            <div class="o-wrap">
+                <a href="index.html" class="item">Home</a>
+                <a href="kontakt.html" class="item">Kontakt</a>
+                <span class="item">PSYCHOMEDIC.PL Warszawa – Centrum</span>
+            </div>
+        </div> 
+
+
+        <div class="c-contact">
+            <div class="o-wrap">
+            
+                <h1 class="o-header o-header--first o-header--triangle o-header--triangle-left violet">PSYCHOMEDIC.PL Warszawa – Centrum</h1>
+
+                <div class="o-cols">
+                    <div class="o-cols__item">
+                        <img src=<%= require("./img/photos/office.jpg") %> alt="" width="470" height="290">
+                    </div>
+                    
+                    <div class="o-cols__item">
+                        <ul class="c-contact__details">
+                            <li class="item address">
+                                <i class="icon-marker"></i>
+                                <p class="o-header o-header--fourth">Adres:</p>
+                                <p>ul. Filtrowa 62</p>
+                                <p>02-057 Warszawa</p>
+                            </li>
+                            
+                            <li class="item contact">
+                                <i class="icon-tel"></i>
+                                <p class="o-header o-header--fourth">Kontakt:</p>
+                                <p>Telefon: <a href="tel:+48222538888">22 253 88 88</a></p>
+                                <p>Email: <a href="mailto:ochota@psychomedic.pl">ochota@psychomedic.pl</a></p>
+                            </li>
+
+                            
+                            <li class="item hours">
+                                <i class="icon-clock-o"></i>
+                                <p class="o-header o-header--fourth">Godziny pracy:</p>
+                                <p><span class="days">Poniedziałek - Piątek</span> <strong>08:00 - 21:00</strong></p>
+                                <p><span class="days">Sobota - Niedziela</span> <strong>08:00 - 21:00</strong></p>
+                            </li>
+                        </ul>
+                        
+                        <div class="o-article">
+<p>
+<strong>Dojazd samochodem lub jednośladem:</strong> bezpośrednio przed Kliniką znajdują się miejski parking. <br>
+Rekomendujemy również parkowanie na ul. Asnyka.<br>
+Dojazd tramwajem: bezpośrednio przed lokalem przystanek Raszyńska 03 – 14 i 15.<br>
+Dojazd autobusem: przystanek Raszyńska 01 – 128 i 175.
+</p>
+
+<p>
+<strong>Dane do przelewu na konto Kliniki PsychoMedic.pl przy ul. Filtrowej 62:</strong><br>
+Akceptujemy płatność przelewem – kwota przelewu musi być zaksięgowana przed wizytą na naszym koncie.<br>
+Odbiorca: NZOZ PsychoMedic, ul. Lanciego 19 lok. 135, Warszawa<br>
+Numer rachunku bankowego: 72 2490 0005 0000 4600 6099 6707<br>
+Alior Bank S.A.<br>
+Iban PL 72 2490 0005 0000 4600 6099 6707<br>
+SWIFT ALBPPLPW</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="c-location">
+            <div class="o-wrap">
+                <div class="o-section">                
+                
+                    <div class="o-cols">
+                        <div class="o-cols__item">
+                        
+                            <div class="c-location__addresses">
+                                <h4 class="o-header o-header--fourth">
+                                    <span>Wybierz adres kliniki</span>
+                                </h4>
+                                
+                                <div class="c-location__scrollarea">
+                                    <div class="c-location__scroll js-locatiotns" data-simplebar data-simplebar-auto-hide="false"  id="locations">
+                                    
+                                        <div class="item js-address is-active" data-address="ul. Filtrowa 62, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC CENTRUM – OCHOTA</p>
+                                                <p>ul. Filtrowa 62</p>
+                                                <p>02-057 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: ochota@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+    
+                                        <div class="item js-address" data-address="l. Lanciego 19 lok. 135, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC URSYNÓW – NATOLIN</p>
+                                                <p>ul. Lanciego 19 lok. 135</p>
+                                                <p>02-792 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: kontakt@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+                                        
+                                        <div class="item js-address" data-address="ul. Białobrzeska 40A, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC OCHOTA – BIAŁOBRZESKA</p>
+                                                <p>ul. Białobrzeska 40A</p>
+                                                <p>02-341 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: bialobrzeska@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+                                        
+                                        <div class="item js-address" data-address="Al. KEN/Przy Bażantarni 11, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC URSYNÓW – KABATY</p>
+                                                <p>Al. KEN/Przy Bażantarni 11</p>
+                                                <p>02-793 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: kabaty@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+                                        
+                                        <div class="item js-address" data-address="ul. Filtrowa 62, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC CENTRUM – OCHOTA</p>
+                                                <p>ul. Filtrowa 62</p>
+                                                <p>02-057 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: ochota@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+    
+                                        <div class="item js-address" data-address="l. Lanciego 19 lok. 135, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC URSYNÓW – NATOLIN</p>
+                                                <p>ul. Lanciego 19 lok. 135</p>
+                                                <p>02-792 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: kontakt@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+                                        
+                                        <div class="item js-address" data-address="ul. Białobrzeska 40A, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC OCHOTA – BIAŁOBRZESKA</p>
+                                                <p>ul. Białobrzeska 40A</p>
+                                                <p>02-341 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: bialobrzeska@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+                                        
+                                        <div class="item js-address" data-address="Al. KEN/Przy Bażantarni 11, Warszawa">
+                                            <address>
+                                                <p>PSYCHOMEDIC URSYNÓW – KABATY</p>
+                                                <p>Al. KEN/Przy Bażantarni 11</p>
+                                                <p>02-793 Warszawa</p>
+                                                <p>telefon: 22 253 88 88</p>
+                                                <p>email: kabaty@psychomedic.pl</p>
+                                            </address>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="o-cols__item">
+                            <div class="c-location__map">
+                                <div class="c-map is-loading js-map" data-address="ul. Filtrowa 62, 02-057 Warszawa" data-marker=<%= require("./img/icons/marker--logo.svg") %>></div
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="c-policy">
+            <div class="o-wrap">
+                <div class="o-section">
+                    <article class="o-article">
+<p>
+W imieniu własnym i Kliniki PsychoMedic.pl deklarujemy, że nasza Klinika przyjmuje i stosuje przyjęte przez Miasto Stołeczne Warszawa zasady równego traktowania, ma świadomość odpowiedzialności prawnej za łamanie przepisów zakazujących dyskryminacji i prowadzi działalność wolną od dyskryminacji, w szczególności ze względu na takie cechy jak płeć, rasa (kolor skóry), pochodzenie etniczne lub narodowość, mogące stanowić podstawę nierównego traktowania, a niemające racjonalnego uzasadnienia z punktu widzenia prowadzonej przez nas działalności.
+</p>
+
+<p class="violet">
+Inspektor Danych Osobowych<br>
+<strong>Dorota Szmurło</strong><br>
+kontakt: <a href="mailto:inspektor@mbrk.pl">inspektor@mbrk.pl</a><br>
+</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+
+
+    <% include ./src/includes/footer %>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+.c-references {
+    
+    &__opinion {
+        width: 100%;
+        border-top: 1px solid $c-gray9;
+        margin-top: 14px;
+        padding-top: 14px;
+
+        .author {
+            @extend %flex;
+            @extend %flex-y;
+            margin-bottom: 3px;
+            font-weight: $bold;
+            
+            .name {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .o-cols {
+        @extend %rel;
+        padding-bottom: 40px;
+        
+        @media screen and ( min-width: $tablet + 1px ) {
+            width: calc(100% + 30px);
+            margin: 0 -15px;
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            left: 15px; bottom: 0;
+            width: calc(100% - 30px); height: 1px;
+            background-color: $c-gray10;
+        }
+        
+        &__item {
+            width: grid(370);
+            margin: 0 15px;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                width: 50%;
+                margin: 0 0 30px 0;
+                padding: 0 15px;
+            }
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                width: auto;
+                max-width: 370px;
+                padding: 0;
+            }
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 0;
+    }
+    
+    .c-doctorbox {
+        background-color: $c-gray4;
+        border-radius: 10px;
+        padding: 15px;
+        
+        &__right {
+            .o-rating {
+                padding: 5px 0 15px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.c-partners {
+    &__list {
+        //max-width: 1050px;
+        margin: 0 auto;
+        padding: 0 60px;
+        
+        .item {
+            margin: 0 20px;
+        }
+        
+        img {
+            max-width: none;
+        }
+    }
+    
+    .o-header {
+        &--fourth {
+            text-transform: none;
+            font-weight: $regular;
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 60px;
+    }
+    
+    .flickity-button { 
+        @extend %abs-y;
+        @extend %flex-xy;
+        width: 36px; height: 36px;
+        border: 2px solid $c-gray2;
+        border-radius: 50%;
+        color: $c-gray2;
+        padding: 0;
+
+        &:before {
+            font-size: rem(18);
+            content: "\e908";
+    
+            .mobile & {
+                margin-left: 8px;
+            }
+        }
+
+        &.next {
+            right: 0;            
+        }
+        
+        &.previous {
+            left: 0;
+        }  
+    }
+}

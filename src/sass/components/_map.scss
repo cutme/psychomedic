@@ -1,0 +1,27 @@
+@keyframes pulse {
+    0%   {
+        background: white;
+    }
+    50% {
+        background: #efefef;
+    }
+    
+    100% {
+        background: white;
+    }
+}
+
+
+.c-map {
+    @extend %abs;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #efefef;
+    border-radius: 10px;
+
+    &.is-loading {
+        //animation: pulse 1s infinite;
+    }
+}
+

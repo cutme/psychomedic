@@ -1,0 +1,9 @@
+.c-doctors-slider {
+    .item {
+        display: none;
+        
+        &.is-active {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/clear';
+@import 'tools/functions';
+@import 'tools/mixins';
+@import 'tools/custom-select';
+@import 'tools/flatpickr';
+@import 'tools/flickity';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/article';
+@import 'objects/award';
+@import 'objects/btn';
+@import 'objects/cols';
+@import 'objects/container';
+@import 'objects/hamburger';
+@import 'objects/header';
+@import 'objects/icons';
+@import 'objects/logo';
+@import 'objects/login';
+@import 'objects/phones';
+@import 'objects/rating';
+@import 'objects/section';
+@import 'objects/tabs';
+@import 'objects/wrap';
+
+@import 'components/about';
+@import 'components/app';
+@import 'components/articles';
+@import 'components/breadcrumbs';
+@import 'components/choicer';
+@import 'components/contact';
+@import 'components/doctorbox';
+@import 'components/doctors-slider';
+@import 'components/footer';
+@import 'components/location';
+@import 'components/map';
+@import 'components/messenger';
+@import 'components/nav';
+@import 'components/partners';
+@import 'components/policy';
+@import 'components/references';
+@import 'components/specialists';
+@import 'components/specialists-slider';
+@import 'components/top';
+
+
+@import 'trumps/trumps';

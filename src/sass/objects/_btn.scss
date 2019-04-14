@@ -1,0 +1,79 @@
+.o-btn {
+    @extend %anim;
+    @extend %flex-xy;
+    display: inline-flex;
+    align-self: baseline;
+    width: auto;
+    height: 42px;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    font: {
+        family: $text;
+        weight: $bold;
+    }
+    
+    /* Sizes */
+    
+    &--big {
+        border-radius: 10px;
+        font-size: rem(20);
+    }
+
+    &--small {
+        height: 24px;
+        border-radius: 5px;
+        padding: 0 5px;
+    }
+   
+   
+    /* Colors */
+
+    &--yellow {
+        background-color: $c-yellow1;
+        color: white;
+        
+        &:hover {
+            background-color: darken($c-yellow1, 10%);
+        }
+    }
+    
+    &--violet {
+        background-color: $c-violet1;
+        color: white;
+        
+        &:hover {
+            background-color: darken($c-violet1, 10%);
+        }
+    }
+    
+    /* Style */
+    
+    &--outline {
+        height: 38px;
+        border: 2px solid $c-violet1;
+        border-radius: 8px;
+        padding: 0 20px;
+        font-size: rem(14);
+        color: $c-violet1;
+        
+        &:hover {
+            background-color: $c-violet1;
+            color: $c-yellow1;
+        }
+        
+        .icon-arrow {
+            transform: scaleX(-1);
+            margin-left: 10px;
+            margin-bottom: 2px;
+            color: $c-orange1;
+        }
+    }
+}
+
+button.o-btn {
+    span {
+        width: 100%;
+        padding-top: 2px;
+    }
+}

@@ -1,0 +1,22 @@
+.c-messenger {
+    @include z-index(messenger);
+    position: fixed;
+    right: 30px; bottom: 30px;
+    width: 90px;
+    height: 90px;
+    background: {
+        color: white;
+        image: url(../img/assets/messenger.png);
+        repeat: no-repeat;
+        size: 68px 68px;
+        position: center;
+    }
+    box-shadow: rgba(#232425, .15) 0 1px 4px;
+    border-radius: 50%;
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        right: 20px; bottom: 20px;
+        width: 60px; height: 60px;
+        background-size: 38px 38px;
+    }
+}

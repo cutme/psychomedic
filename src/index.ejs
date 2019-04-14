@@ -1,0 +1,553 @@
+<% include ./src/includes/head %>
+
+<body class="home" style="overflow: hidden;">
+
+<% include ./src/includes/cover %>
+                                            
+    <div class="o-container">
+
+        <% include ./src/includes/top %>
+
+
+        <% include ./src/includes/nav %>
+        
+        
+        <div class="c-app">
+            <div class="o-award"></div>
+            
+            <div class="o-wrap">
+                <h2 class="o-header o-header--second">umów się <span>online</span> na wizytę lub zadzwoń <span>22 253 88 88</span></h2>
+                
+                <div class="form-row">
+                    <div class="form-col clinic">
+                        <div class="form-group">
+                            <label class="form-label">Wybierz klinikę</label>
+                            <select>
+                                <option>Pokaż wszystkie</option>
+                                <option>Option</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-col specialty">
+                        <div class="form-group">
+                            <label class="form-label">Wybierz specjalność</label>
+                            <select>
+                                <option>Psychiatra</option>
+                                <option>Option</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-col doctor">
+                        <div class="form-group">
+                            <label class="form-label">Wybierz lekarza</label>
+                            <select>
+                                <option>Pokaż wszystkich</option>
+                                <option>Option</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-col dates">
+                        <div class="form-group">
+                            <label class="form-label">Wybierz zakres dat</label>
+                            
+                            <div>
+                                <input type="text" class="form-field form-field--flex calendar" id="dateStart">
+                                <i class="dash"></i>
+                                <input type="text" class="form-field form-field--flex calendar" id="dateEnd">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-col hours">
+                        <div class="form-group">
+                            <label class="form-label">Wybierz godziny</label>
+    
+                            <div>
+                                <input type="text" class="form-field form-field--flex clock" id="timeStart">
+                                <i class="dash"></i>
+                                <input type="text" class="form-field form-field--flex clock" id="timeEnd">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-col submit">
+                        <div class="form-group">
+                            <label class="form-label">&nbsp;</label>
+                            
+                            <button type="submit" class="o-btn o-btn--yellow o-btn--big">
+                                <span><i class="icon-search"></i> Szukaj</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="c-specialists">
+            <div class="o-section">
+                <h2 class="o-header o-header--first o-header--triangle o-header--triangle-bottom text-center">Specjaliści na dzisiaj</h2>
+                
+                <div class="c-choicer" id="choicer">
+                    <div class="c-choicer">
+                    
+                        <div class="o-tabs" id="tabs">
+                            <ul class="o-tabs__nav js-nav">
+                                <li class="js-tab is-active">Warszawa</li>
+                                <li class="js-tab">Łódź</li>
+                            </ul>
+                        
+                            <ul class="o-tabs__content js-content">
+                                <li class="o-tabs__item js-tab is-active">
+                                    <div class="c-choicer__specs">
+                                        <h5 class="o-header o-header--third">Wybierz specjalizację lekarza</h5>
+                                        
+                                        <div class="c-specialists-slider">
+                                            <div class="js-specialists">
+                                                <div class="item js-specitem is-active" data-specialty="s1">Psychiatra Dorosłych</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s2">Psychiatra Dzieci i Młodzieży</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s3">Psychiatra Osób Starszych</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s4">Psychoterapeuta</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s5">Psycholog</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s6">Psycholog Dzieci</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s7">Psycholog Młodzieży</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                        
+                                    <div class="c-choicer__doctors">
+                                        <div class="c-doctors-slider">
+                                            <div class="item js-doctors is-active" id="s1">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s2">
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                                
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s3">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s4">
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                                
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s5">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s6">
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                                
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s7">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="o-tabs__item js-tab">
+                                    <div class="c-choicer__specs">
+                                        <h5 class="o-header o-header--third">Wybierz specjalizację lekarza</h5>
+                                        
+                                        <div class="c-specialists-slider">
+                                            <div class="js-specialists">
+                                                <div class="item js-specitem is-active" data-specialty="s8">Psycholog z Łodzi</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s9">Psychiatra Dzieci i Młodzieży</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s10">Psychiatra Osób Starszych</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s11">Psychoterapeuta</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s12">Psycholog</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s13">Psycholog Dzieci</div>
+                                                
+                                                <div class="item js-specitem" data-specialty="s14">Psycholog Młodzieży</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="c-choicer__doctors">
+                                        <div class="c-doctors-slider">
+                                            <div class="item js-doctors is-active" id="s8">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s9">
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                                
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors is-active" id="s10">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s11">
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                                
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors is-active" id="s12">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors" id="s13">
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                                
+                                                <% include ./src/includes/choicer-doctors2 %>
+                                            </div>
+                                            
+                                            <div class="item js-doctors is-active" id="s14">
+                                                <% include ./src/includes/choicer-doctors %>
+                                                
+                                                <% include ./src/includes/choicer-doctors %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="c-references">
+            <div class="o-section">
+                <div class="o-wrap">
+                    <h2 class="o-header o-header--first o-header--triangle o-header--triangle-bottom text-center">Naszych specjalistów polecają pacjenci</h2>
+                    
+                    <div class="o-cols">
+                        <div class="o-cols__item">
+                            <div class="c-doctorbox">
+                                <div class="c-doctorbox__left">
+                                    <img src=<%= require("./img/photos/barbara.jpg") %> alt="Barbara Stec-Szczęsna" width="88" height="88">                                
+                                </div>
+                                
+                                <div class="c-doctorbox__right">
+                                    <h5 class="o-header o-header--fourth">dr n.med. Barbara Stec-Szczęsna</h5>
+                                    <p class="specialty">Psychiatra Dorośli i Młodzież od 16 r.ż.</p>
+                                    
+                                    <div class="o-rating">
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                    </div>
+                                    
+                                    <a href="#" class="o-btn o-btn--small o-btn--violet">Umów wizytę</a>
+                                </div>
+                                
+                                <div class="c-references__opinion">
+                                    <div class="author">
+                                        <div class="author">
+                                            <p class="name">Patrycja</span> 14 czerwca 2018</p>
+                                        
+                                            <div class="o-rating o-rating--small">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="opinion">
+                                        <p>Polecam, bardzo fachowa, rzeczowa, łącząca wątki, empatyczna lekarka. Chciałbym zawsze spotykać takich lekarzy na swojej drodze. Lekarz który chce słuchać pacjenta. Otwarta na sugestie i oczekiwania pacjenta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="o-cols__item">
+                            <div class="c-doctorbox">
+                                <div class="c-doctorbox__left">
+                                    <img src=<%= require("./img/photos/malgorzata.jpg") %> alt="" width="88" height="88">
+                                </div>
+                                
+                                <div class="c-doctorbox__right">
+                                    <h5 class="o-header o-header--fourth">dr n.med. Barbara Stec-Szczęsna</h5>
+                                    <p class="specialty">Psychiatra Dorośli i Młodzież od 16 r.ż.</p>
+                                    
+                                    <div class="o-rating">
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                    </div>
+                                    
+                                    <a href="#" class="o-btn o-btn--small o-btn--violet">Umów wizytę</a>
+                                </div>
+                                
+                                <div class="c-references__opinion">
+                                    <div class="author">
+                                        <div class="author">
+                                            <p class="name">Patrycja</span> 14 czerwca 2018</p>
+                                        
+                                            <div class="o-rating o-rating--small">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="opinion">
+                                        <p>Polecam, bardzo fachowa, rzeczowa, łącząca wątki, empatyczna lekarka. Chciałbym zawsze spotykać takich lekarzy na swojej drodze. Lekarz który chce słuchać pacjenta. Otwarta na sugestie i oczekiwania pacjenta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="o-cols__item">
+                            <div class="c-doctorbox">
+                                <div class="c-doctorbox__left">
+                                    <img src=<%= require("./img/photos/iwona.jpg") %> alt="" width="88" height="88">
+                                </div>
+                                
+                                <div class="c-doctorbox__right">
+                                    <h5 class="o-header o-header--fourth">dr n.med. Barbara Stec-Szczęsna</h5>
+                                    <p class="specialty">Psychiatra Dorośli i Młodzież od 16 r.ż.</p>
+                                    
+                                    <div class="o-rating">
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                    </div>
+                                    
+                                    <a href="#" class="o-btn o-btn--small o-btn--violet">Umów wizytę</a>
+                                </div>
+                                
+                                <div class="c-references__opinion">
+                                    <div class="author">
+                                        <div class="author">
+                                            <p class="name">Patrycja</span> 14 czerwca 2018</p>
+                                        
+                                            <div class="o-rating o-rating--small">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="opinion">
+                                        <p>Polecam, bardzo fachowa, rzeczowa, łącząca wątki, empatyczna lekarka. Chciałbym zawsze spotykać takich lekarzy na swojej drodze. Lekarz który chce słuchać pacjenta. Otwarta na sugestie i oczekiwania pacjenta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="c-partners">
+            <div class="o-section">
+                <div class="o-wrap">
+                    <header class="o-header--triangle o-header--triangle-bottom text-center">
+                        <h2 class="o-header o-header--first">Eksperci Psychomedic w mediach</h2>
+                        <h5 class="o-header o-header--fourth">Lekarze i specjaliści naszej kliniki udzielają porad oraz wywiadów w mediach</h5>
+                    </header>
+
+                    <div class="c-partners__list" id="partners">
+                        <div class="item">
+                            <img src=<%= require("./img/partners/newsweek.png") %> alt="newsweek" width="155" height="60">
+                        </div>
+                        
+                        <div class="item">
+                            <img src=<%= require("./img/partners/gazeta-wyborcza.png") %> alt="gazeta-wyborcza" width="147" height="60">
+                        </div>
+                        
+                        <div class="item">
+                            <img src=<%= require("./img/partners/radio-vox.png") %> alt="radio-vox" width="145" height="60">
+                        </div>
+                        
+                        <div class="item">
+                            <img src=<%= require("./img/partners/rozmowy.png") %> alt="rozmowy" width="118" height="60">
+                        </div>
+                        
+                        <div class="item">
+                            <img src=<%= require("./img/partners/rdc.png") %> alt="rdc" width="129" height="60">
+                        </div>
+                        
+                        <div class="item">
+                            <img src=<%= require("./img/partners/perspektywy.png") %> alt="perspektywy" width="144" height="60">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        
+        <div class="c-articles">
+            <div class="o-section">
+                <div class="o-wrap">
+                    <h2 class="o-header o-header--first o-header--triangle o-header--triangle-bottom text-center">Poradnik pacjenta</h2>
+
+                    <div class="o-cols">
+                        <div class="o-cols__item">
+                            <div class="c-articles__photo">
+                                <a href="#">
+                                    <img src=<%= require("./img/photos/blog-1.jpg") %> alt="" width="370" height="207">
+                                </a>
+                            </div>
+                            
+                            <h5 class="o-header o-header--fourth">
+                                <a href="#">Jak rozmawiać z dzieckiem o pornografii?</a>
+                            </h5>
+                            
+                            <p class="c-articles__date">
+                                <i class="icon-calendar-o"></i> <span class="date">20 stycznia 2019</span>
+                            </p>
+                            
+                            <div class="c-articles__excerpt">
+                                <p>Kiedy pornografia zaczęła pojawiać się w Polsce, dostęp do niej był ograniczony. Chcąc kupić czasopismo pornograficzne lub film video z treściami o charakterze pornograficznym, konieczne było spełnienie wymogu pełnoletności.</p>
+                            </div>
+                            
+                            <div class="c-articles__more">
+                                <a href="#">czytaj więcej</a>
+                            </div>
+                        </div>
+                        
+                        <div class="o-cols__item">
+                            <div class="c-articles__photo">
+                                <a href="#">
+                                    <img src=<%= require("./img/photos/blog-2.jpg") %> alt="" width="370" height="207">
+                                </a>
+                            </div>
+                            
+                            <h5 class="o-header o-header--fourth">
+                                <a href="#">Jak rozmawiać z dzieckiem o pornografii?</a>
+                            </h5>
+                            
+                            <p class="c-articles__date">
+                                <i class="icon-calendar-o"></i> <span class="date">20 stycznia 2019</span>
+                            </p>
+                            
+                            <div class="c-articles__excerpt">
+                                <p>Kiedy pornografia zaczęła pojawiać się w Polsce, dostęp do niej był ograniczony. Chcąc kupić czasopismo pornograficzne lub film video z treściami o charakterze pornograficznym, konieczne było spełnienie wymogu pełnoletności.</p>
+                            </div>
+                            
+                            <div class="c-articles__more">
+                                <a href="#">czytaj więcej</a>
+                            </div>
+                        </div>
+                        
+                        <div class="o-cols__item">
+                            <div class="c-articles__photo">
+                                <a href="#">
+                                    <img src=<%= require("./img/photos/blog-3.jpg") %> alt="" width="370" height="207">
+                                </a>
+                            </div>
+                            
+                            <h5 class="o-header o-header--fourth">
+                                <a href="#">Jak rozmawiać z dzieckiem o pornografii?</a>
+                            </h5>
+                            
+                            <p class="c-articles__date">
+                                <i class="icon-calendar-o"></i> <span class="date">20 stycznia 2019</span>
+                            </p>
+                            
+                            <div class="c-articles__excerpt">
+                                <p>Kiedy pornografia zaczęła pojawiać się w Polsce, dostęp do niej był ograniczony. Chcąc kupić czasopismo pornograficzne lub film video z treściami o charakterze pornograficznym, konieczne było spełnienie wymogu pełnoletności.</p>
+                            </div>
+                            
+                            <div class="c-articles__more">
+                                <a href="#">czytaj więcej</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="c-articles__all">
+                        <a href="#" class="o-btn o-btn--outline">Wszystkie artykuły <i class="icon-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="c-about">
+            <div class="o-wrap">
+                <div class="o-section">
+                    <div class="o-article o-article--columns text-justify">
+<p>NZOZ PsychoMedic.pl Klinika Psychologiczno-Psychiatryczna jest wysokospecjalistycznym zespołem <strong>Profesorów i Ordynatorów</strong> psychiatrów oraz dyplomowanych psychoterapeutów.</p>
+
+<p>Pracujemy  7 dni w tygodniu. Lecząc się w Klinice PsychoMedic.pl nie zostaniesz bez opieki nawet w weekendy.</p>
+
+<p><strong>Jesteśmy otwarci: Poniedziałek – Piątek od 8.00 – 21.00; Sobota i Niedziela 9.00 – 21.00.</strong></p>
+
+<p>Posiadamy uprawnienia i jesteśmy wpisani na listę Podmiotów Wykonujących Działalność Leczniczą przez Wojewodę Mazowieckiego.</p>
+
+<p><strong>Leczymy</strong> depresję, zaburzenia odżywiania się, zaburzenia nerwicowe i lękowe, zaburzenia seksualne, uzależnienia, zaburzenia psychotyczne, schizofrenie, zaburzenia osobowości, zaburzenia snu, świadczymy pomoc w budowaniu związku/miłości – terapia par. Praca z psychoterapeutą i coachem pomoże również w rozwoju Twojego potencjału – lepszym planowaniu, osiąganiu celów, efektywnym działaniu, bardziej satysfakcjonującej współpracy z ludźmi oraz rozwinie Twoje umiejętności tworzenia bliskich relacji.</p>
+
+<p><strong>Pomagamy kompleksowo</strong>. Jeśli w czasie leczenia będzie potrzebna konsultacja innego specjalisty, nie musisz się martwić gdzie znaleźć takiego, któremu możesz zaufać. Przyjmuje on w PsychoMedic.pl.</p>
+
+
+<p><strong>Prowadzimy działalność edukacyjną dla lekarzy psychiatrów i lekarzy innych specjalności oraz psychologów na terenie całej Polski</strong>. Nasz Zespół składa się z autorytetów z dziedziny zdrowia psychicznego, posiadamy na naszym koncie publikacje w najbardziej prestiżowych  zagranicznych czasopismach naukowych.<br>
+<strong>Publikujemy materiały psychoedukacyjne</strong> oraz praktyczne porady wspierające leczenie na stronie poradni w zakładce Blog oraz w rubryce Specjalista poleca. Tworzymy filmy psychoedukacyjne, oraz udzielamy wywiadów w mediach. Gdy szukasz psycholog Warszawa lub psychoterapia Warszawa to my jesteśmy najlepszym wyborem.</p>
+
+<p>Dokładamy wszelkich starań abyś w naszej poradni poczuł się komfortowo, bardzo dbamy o atmosferę akceptacji, zrozumienia, życzliwości. Dyskrecja jest dla nas bardzo ważna. Nasi specjaliści są nie tylko fachowcami w swojej dziedzinie, ale również pasjonatami, autentycznie zaangażowanymi w sprawy swoich pacjentów. Nadaje to szczególny charakter Klinice PsychoMedic.pl. Dbamy również o czas naszych pacjentów. Wizyty odbywają się punktualnie, abyś nie musiał spędzać swojego czasu na oczekiwaniu. Nasi psychiatrzy współpracują ze szpitalami i instytutami psychiatrycznymi na terenie całej Warszawy. Jeśli Twoje trudności wymagają hospitalizacji wiedzą gdzie Cię pokierować, abyś uzyskał najlepszą pomoc. Znają specyfikę leczenia w tych ośrodkach ze swojego własnego doświadczenia pracy w różnych szpitalach. Dlatego większość naszych pacjentów/klientów przychodzi do nas z polecenia, co jest najlepszą dla nas rekomendacją! Zapewniamy najwyższą jakoś usług i gwarantujemy bardzo dobrze przygotowany oraz wykwalifikowany personel. Zapraszamy do umówienia wizyty z psychologiem lub psychiatrą PsychoMedic.pl.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <% include ./src/includes/footer %>
+
+    </div>
+</body>
+</html>

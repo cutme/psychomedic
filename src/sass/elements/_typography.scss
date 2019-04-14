@@ -1,0 +1,33 @@
+body {
+	@include antialias;
+	line-height: 1.3;
+	text-rendering: optimizeSpeed;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $regular;
+	}
+	color: $c-gray1;
+}
+
+a {
+    @extend %anim;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	&:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+strong {
+    font-weight: $bold;
+}
+
+::selection {
+	background-color: $c-gray1;
+	color: white;
+}

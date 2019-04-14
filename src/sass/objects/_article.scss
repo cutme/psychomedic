@@ -1,0 +1,28 @@
+.o-article {
+
+    p {
+        &:not(:last-of-type) {
+            margin-bottom: 1.5em;
+        }
+        
+        & + ul {
+            margin-top: -1em;
+        }
+    }
+    
+    ul {
+        margin-bottom: 1.5em;
+        
+        li {
+            @extend %rel;
+            padding-left: 30px;            
+        }
+    }
+
+    &--columns {
+        @media screen and ( min-width: $smartphone + 1px ) {
+            column-count: 2;
+            column-gap: 40px;
+        }
+    }
+}

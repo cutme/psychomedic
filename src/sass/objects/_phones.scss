@@ -1,0 +1,26 @@
+.o-phones {    
+    
+    p {
+        margin-bottom: 4px;
+    }
+
+    .num {
+        @extend %ulink;        
+    }
+    
+    .icon-tel {
+        display: inline-block;
+        margin-right: 4px;
+        transform: scaleX(-1);
+        font-size: rem(16);
+        
+        @media screen and ( max-width: $base + 80px ) {
+            font-size: get-vw-1250(16);
+        }  
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-right: 0;
+            font-size: rem(10);
+        }      
+    }
+}

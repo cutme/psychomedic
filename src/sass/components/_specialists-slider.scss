@@ -1,0 +1,41 @@
+
+.c-specialists-slider {
+    @extend %rel;
+
+    .item {
+        display: block;
+        margin: 0 10px;
+        padding: 5px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        cursor: pointer;
+        color: $c-gray5;
+        
+        &:hover {
+            color: $c-orange1;
+        }
+        
+        &.is-active {
+            background-color: $c-orange1;
+            font-weight: $bold;
+            color: white;
+        }
+    }
+    
+    .flickity-button {
+        @extend %abs-y;
+        height: 25px;
+        color: $c-orange1;
+        
+        &.previous { 
+            left: -45px;
+            //left: 0;
+        }
+    
+        &.next { 
+            right: -45px; 
+            //right: 0;
+        }
+    }
+}
+

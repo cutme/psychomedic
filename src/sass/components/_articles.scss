@@ -1,0 +1,105 @@
+.c-articles {
+
+    &__all {
+        text-align: center;
+    }
+
+    &__date {
+        margin-bottom: 1em;
+        color: $c-gray11;
+        
+        i {
+            margin-right: 6px;   
+        }
+    }
+    
+    &__excerpt {
+        margin-bottom: 10px;
+
+        p {
+            font-size: rem(14);
+        }
+    }
+    
+    &__more {
+        text-align: right;
+        
+        a {
+            color: $c-violet1;
+
+            &:after {
+                margin-left: 2px;
+                content: '>';
+            }
+        }
+    }
+
+    &__photo {
+        margin-bottom: 15px;
+        box-shadow: rgba($c-black1, .15) 1px 0 4px;
+
+        a {
+            display: block;
+            border-radius: 10px;
+            overflow: hidden;
+            
+            &:hover {
+                img {
+                    transform: scale3d(1.1,1.1,1);
+                }
+            }
+        }
+
+        img {
+            
+            transition: transform 1s;
+        	-webkit-backface-visibility: hidden;
+        	backface-visibility: hidden;
+        }
+    }
+
+    .o-section {
+        background-color: $c-gray4;
+    }
+    
+    .o-header {
+        &--triangle {
+            color: $c-violet1;
+        }
+        
+        &--fourth {
+            margin-bottom: .5em;
+            color: $c-violet1;            
+        }
+    }
+    
+    .o-cols {
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            width: calc(100% + 30px);
+            margin: 0 -15px;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            width: 370px;
+            margin: 0 15px 40px 15px;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                width: 50%;
+                margin: 0 0 30px 0;
+                padding: 0 15px;
+            }
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                width: auto;
+                max-width: 370px;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@function rem( $target, $context: $base-font-size ) {
+	@return ( $target / 16 ) * 1rem;
+}
+
+@function get-vw-1250($target) {
+	$vw-context: (($base + 80) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-1400($target) {
+	$vw-context: (($slider) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-1030($target) {
+	$vw-context: ((1030) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-768($target) {
+	$vw-context: (($tablet_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function grid( $width, $context: $base ) {
+    @return percentage( $width / $context );
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

@@ -1,0 +1,11 @@
+.c-policy {
+    margin-bottom: 50px;
+
+    .o-section {
+        padding: {
+            top: 40px;
+            bottom: 40px;
+        }
+        border-bottom: 1px solid $c-gray10;
+    }
+}

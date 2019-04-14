@@ -1,0 +1,195 @@
+.c-footer {
+    background-color: $c-violet1;
+    color: white;
+    
+    address {
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $c-orange1;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        a {
+            @extend %ulink;
+            
+            &:before, &:after {
+                background-color: white;
+            }
+        }
+    }
+    
+    &__nav {   
+        ul {
+            @extend %flex-wrap;
+            
+            @media screen and ( max-width: $tablet + px ) {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            
+            @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                display: flex;
+            }
+        }     
+
+        li {
+            text-transform: uppercase;
+            font-weight: $bold;
+
+            &:not(:last-child) {
+                @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                    margin-right: 8px;
+                    padding-right: 9px;
+                    border-right: 1px solid white;
+                }
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                margin-bottom: 4px;
+            }
+            
+            &:first-child {
+                color: $c-orange1;
+                border-color: $c-orange1;
+            }
+            
+            a {
+                white-space: nowrap;
+
+                &:hover {
+                    color: $c-orange1;
+                }
+            }
+        }
+    }
+    
+    &__social {
+        width: 150px;
+        margin-bottom: 36px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            margin: 0 auto 40px auto;;
+        }
+        
+        a {
+            @extend %flex;
+            @extend %flex-y;
+            width: 100%;
+            margin-bottom: 10px;
+            
+            i {
+                margin-right: 15px;
+                font-size: rem(38);
+            }
+            
+            span {
+                text-transform: uppercase;
+                font-weight: $bold;
+            }
+        }
+    }
+    
+    .o-cols {
+
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            width: calc(100% + 30px);
+            margin: 0 -15px;
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__item {
+            width: 270px;
+            margin: 0 15px;
+            
+            @media screen and ( min-width: $smartphone + 1px ) {
+                padding-right: 30px;
+                
+                &:first-of-type,
+                &:last-of-type {
+                    padding: 0;
+                }
+            }
+            
+            &:last-of-type {
+                @extend %flex;
+                @extend %flex-wrap;
+                @extend %flex-spacebetween;
+                
+                a {
+                    text-decoration: underline;
+                }
+                
+                @media screen and ( max-width: $tablet + px ) {
+                    display: block;
+                }            
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                margin-bottom: 40px;
+                
+                &:first-of-type {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                margin-bottom: 20px;
+            }
+            
+                
+        }
+    }
+    
+    &__dotpay {
+        @extend %flex;
+        @extend %flex-wrap;
+        @extend %flex-end;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            //justify-content: center;
+            padding-top: 40px;
+            text-align: center;
+        }
+        
+            
+    }
+    
+    .o-header {
+        &--fourth {
+            margin-bottom: 1em;
+            color: $c-orange1;
+        }
+    }
+    
+    .o-logo {
+        width: 200px;
+        margin-bottom: 36px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            margin: 0 auto 36px auto;
+        }
+    }
+    
+    .o-phones {
+        margin-bottom: 36px;
+        font-size: rem(16);
+        
+        .city {
+            font-weight: $bold;
+        }
+        
+        .icon-tel {
+            color: $c-orange1;
+        }
+    }
+    
+    .o-section {
+        padding: 40px 0;
+    }
+}

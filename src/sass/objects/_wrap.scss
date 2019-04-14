@@ -1,0 +1,13 @@
+.o-wrap {
+	width: $base + 80px;
+	margin: 0 auto;	
+	padding: 0 40px;
+	
+	@media screen and ( max-width: $base + 80px ) {
+	    width: 100%;
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+        padding: 0 20px;
+	}
+}

@@ -1,0 +1,8 @@
+.o-section {
+    @extend %rel;
+    padding: 60px 0;
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        padding: 40px 0;
+    }
+}

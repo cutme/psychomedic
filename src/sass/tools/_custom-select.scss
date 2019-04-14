@@ -1,0 +1,130 @@
+.customSelect {
+    @extend %rel;
+    -webkit-tap-highlight-color: transparent;
+    @extend %flex;
+    @extend %flex-y;
+    float: left;
+    width: 100%;
+    height: 42px;
+//    background-color: white;
+    
+    //border-radius: 5px;
+    //border: solid 1px #e8e8e8;
+    clear: both;
+    cursor: pointer;    
+    line-height: 40px;
+    outline: none;
+    text-align: left !important;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+    
+    &:hover {
+        //border-color: #dbdbdb;
+    }
+    
+    &:active, &.is-open, &:focus {
+        //border-color: #999;
+    }
+
+/*
+    &:after {
+        @extend %abs;
+        top: 4px;
+        right: 20px;
+        content: '';
+        display: block;
+        pointer-events: none;
+        transition: all 0.15s ease-in-out;
+        font: {
+            family: $icomoon;
+            size: rem(6);
+        }
+        color: $c-green1;
+        content: "\e900";
+    }
+    
+*/
+    &.is-open {
+        &:after {
+            transform: scaleY(-1);
+        }
+        
+        .custom-select-panel {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    .custom-select-opener {
+        display: block;
+        width: 100%;
+        padding-left: 18px;
+        padding-right: 30px;
+        color: $c-gray1;
+    }
+    
+    .custom-select-panel {
+        @extend %abs;
+        z-index: 9;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+        box-sizing: border-box;
+        margin-top: 4px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        pointer-events: none;
+        transform-origin: 50% 0;
+        transform: scale(0.75) translateY(-21px);
+        transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+        box-shadow: rgba(black, .2) 0 5px 30px;
+        
+        &:hover .custom-select-option:not(:hover) {
+            background-color: transparent !important;
+        }
+    }
+    
+    .custom-select-option {
+        cursor: pointer;
+        min-height: 32px;
+        outline: none;
+        text-align: left;
+        font-size: rem(14);
+        -webkit-transition: all 0.2s;
+        
+        &:not(:last-of-type) {
+            border-bottom: 1px solid rgba(white, .2);
+        }
+        
+        &:hover, 
+        &.has-focus, 
+        &.is-selected.has-focus {
+            background-color: darken($c-violet1, 2%);
+        }
+        
+        &.is-selected {
+            font-weight: bold;
+        }
+        
+        &.disabled {
+            background-color: transparent;
+            color: #999;
+            cursor: default;
+        }
+    }
+}
+
+.no-csspointerevents .customSelect .custom-select-panel {
+display: none; }
+
+.no-csspointerevents .customSelect.is-open .custom-select-panel {
+display: block; }
+
+select {
+    display: none;
+}
